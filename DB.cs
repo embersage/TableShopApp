@@ -1,7 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
 
-namespace TableShop
+namespace TableShopApp
 {
     public class DB
     {
@@ -25,7 +25,7 @@ namespace TableShop
             }
         }
 
-        private static MySqlConnection GetConnection()
+        public static MySqlConnection GetConnection()
         {
             return connection;
         }

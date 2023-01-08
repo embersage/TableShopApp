@@ -1,6 +1,6 @@
 ﻿namespace TableShopApp
 {
-    partial class AddEmployeeForm
+    partial class EditEmployeeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -46,7 +46,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cbGender = new System.Windows.Forms.ComboBox();
-            this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.btnEditEmployee = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -215,19 +215,19 @@
             this.cbGender.Size = new System.Drawing.Size(204, 21);
             this.cbGender.TabIndex = 18;
             // 
-            // btnAddEmployee
+            // btnEditEmployee
             // 
-            this.btnAddEmployee.BackColor = System.Drawing.Color.White;
-            this.btnAddEmployee.FlatAppearance.BorderSize = 0;
-            this.btnAddEmployee.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddEmployee.ForeColor = System.Drawing.Color.Black;
-            this.btnAddEmployee.Location = new System.Drawing.Point(434, 182);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(141, 56);
-            this.btnAddEmployee.TabIndex = 19;
-            this.btnAddEmployee.Text = "Добавить";
-            this.btnAddEmployee.UseVisualStyleBackColor = false;
-            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
+            this.btnEditEmployee.BackColor = System.Drawing.Color.White;
+            this.btnEditEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEditEmployee.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnEditEmployee.ForeColor = System.Drawing.Color.Black;
+            this.btnEditEmployee.Location = new System.Drawing.Point(434, 182);
+            this.btnEditEmployee.Name = "btnEditEmployee";
+            this.btnEditEmployee.Size = new System.Drawing.Size(141, 56);
+            this.btnEditEmployee.TabIndex = 19;
+            this.btnEditEmployee.Text = "Изменить";
+            this.btnEditEmployee.UseVisualStyleBackColor = false;
+            this.btnEditEmployee.Click += new System.EventHandler(this.btnEditEmployee_Click);
             // 
             // btnBack
             // 
@@ -243,14 +243,14 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // AddEmployeeForm
+            // EditEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(600, 420);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnAddEmployee);
+            this.Controls.Add(this.btnEditEmployee);
             this.Controls.Add(this.cbGender);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -270,8 +270,8 @@
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.tbSurname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddEmployeeForm";
-            this.Text = "AddEmployeeForm";
+            this.Name = "EditEmployeeForm";
+            this.Text = "EditEmployeeForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,7 +297,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbGender;
-        private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.Button btnEditEmployee;
         private System.Windows.Forms.Button btnBack;
     }
 }

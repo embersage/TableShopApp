@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlSide = new System.Windows.Forms.Panel();
+            this.btnConsignments = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnGoods = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnProviders = new System.Windows.Forms.Button();
             this.pnlSide.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
@@ -44,6 +46,8 @@
             // pnlSide
             // 
             this.pnlSide.BackColor = System.Drawing.Color.DimGray;
+            this.pnlSide.Controls.Add(this.btnProviders);
+            this.pnlSide.Controls.Add(this.btnConsignments);
             this.pnlSide.Controls.Add(this.btnStatistics);
             this.pnlSide.Controls.Add(this.label2);
             this.pnlSide.Controls.Add(this.btnGoods);
@@ -55,6 +59,21 @@
             this.pnlSide.Size = new System.Drawing.Size(200, 420);
             this.pnlSide.TabIndex = 0;
             // 
+            // btnConsignments
+            // 
+            this.btnConsignments.BackColor = System.Drawing.Color.DimGray;
+            this.btnConsignments.FlatAppearance.BorderSize = 0;
+            this.btnConsignments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsignments.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnConsignments.ForeColor = System.Drawing.Color.White;
+            this.btnConsignments.Location = new System.Drawing.Point(0, 198);
+            this.btnConsignments.Name = "btnConsignments";
+            this.btnConsignments.Size = new System.Drawing.Size(200, 30);
+            this.btnConsignments.TabIndex = 5;
+            this.btnConsignments.Text = "Поставки";
+            this.btnConsignments.UseVisualStyleBackColor = false;
+            this.btnConsignments.Click += new System.EventHandler(this.btnConsignments_Click);
+            // 
             // btnStatistics
             // 
             this.btnStatistics.BackColor = System.Drawing.Color.DimGray;
@@ -62,7 +81,7 @@
             this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatistics.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnStatistics.ForeColor = System.Drawing.Color.White;
-            this.btnStatistics.Location = new System.Drawing.Point(0, 198);
+            this.btnStatistics.Location = new System.Drawing.Point(0, 270);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Size = new System.Drawing.Size(200, 30);
             this.btnStatistics.TabIndex = 2;
@@ -157,6 +176,21 @@
             this.pnlMain.Size = new System.Drawing.Size(600, 420);
             this.pnlMain.TabIndex = 2;
             // 
+            // btnProviders
+            // 
+            this.btnProviders.BackColor = System.Drawing.Color.DimGray;
+            this.btnProviders.FlatAppearance.BorderSize = 0;
+            this.btnProviders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProviders.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnProviders.ForeColor = System.Drawing.Color.White;
+            this.btnProviders.Location = new System.Drawing.Point(0, 234);
+            this.btnProviders.Name = "btnProviders";
+            this.btnProviders.Size = new System.Drawing.Size(200, 30);
+            this.btnProviders.TabIndex = 6;
+            this.btnProviders.Text = "Поставщики";
+            this.btnProviders.UseVisualStyleBackColor = false;
+            this.btnProviders.Click += new System.EventHandler(this.btnProviders_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,6 +222,8 @@
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel pnlMain;
+        private System.Windows.Forms.Button btnConsignments;
+        private System.Windows.Forms.Button btnProviders;
     }
 }
 

@@ -1,13 +1,9 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TableShop;
+using TableShopApp;
 
 namespace TableShopApp
 {
@@ -38,12 +34,39 @@ namespace TableShopApp
 
         private void btnRemoveEmployee_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (dgvEmployees.SelectedRows.Count > 0)
+                {
+                    foreach (DataGridViewRow row in dgvEmployees.SelectedRows)
+                    {
+                        int id = Convert.ToInt32(row.Cells[0].Value);
+                        MySqlCommand command = new MySqlCommand($"DELETE FROM `employees` WHERE `employee_id` = @id", DB.GetConnection());
+                        command.Parameters.AddWithValue("@id", id);
+                        command.ExecuteNonQuery();
+                        dgvEmployees.Rows.RemoveAt(row.Index);
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка удаления.");
+            }
         }
 
-        private void btnRemoveAllEmployees_Click(object sender, EventArgs e)
+        private void btnEditEmployee_Click(object sender, EventArgs e)
         {
-
+            List<string> values = new List<string>();
+            if (dgvEmployees.SelectedRows.Count == 1)
+            {
+                foreach (DataGridViewRow row in dgvEmployees.SelectedRows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                        values.Add(cell.Value.ToString());
+                }
+            }
+            EditEmployeeForm editEmployeeForm = new EditEmployeeForm(values);
+            editEmployeeForm.ShowDialog();
         }
     }
 }

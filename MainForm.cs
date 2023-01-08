@@ -2,7 +2,7 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
-using TableShop;
+using TableShopApp;
 
 namespace TableShopApp
 {
@@ -42,6 +42,16 @@ namespace TableShopApp
         private void btnGoods_Click(object sender, EventArgs e)
         {
             LoadForm(new GoodsForm());
+        }
+
+        private void btnConsignments_Click(object sender, EventArgs e)
+        {
+            LoadForm(new ConsignmentsForm());
+        }
+
+        private void btnProviders_Click(object sender, EventArgs e)
+        {
+            LoadForm(new ProvidersForm());
         }
 
         private void btnStatistics_Click(object sender, EventArgs e)
